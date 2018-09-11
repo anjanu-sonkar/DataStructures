@@ -1,6 +1,11 @@
 #include "cvertex.h"
 
-CVertex::CVertex(char id)   : id{id}, parent{nullptr}, visited{false}
+CVertex::CVertex(char id)   : id{id}, name{}, parent{nullptr}, visited{false}
+{
+
+}
+
+CVertex::CVertex(std::string name) :id{0}, name{name}, parent{nullptr}, visited{false}
 {
 
 }

@@ -4,7 +4,12 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += main.cpp \
-    cvertex.cpp
+    cvertex.cpp \
+    cgraph.cpp \
+    CEdge.cpp
 
 HEADERS += \
-    cvertex.h
+    cvertex.h \
+    cgraph.h \
+    DataTypes.h \
+    CEdge.h

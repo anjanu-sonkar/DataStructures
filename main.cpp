@@ -2,6 +2,7 @@
 #include <unordered_map>
 #include <unordered_set>
 #include "cvertex.h"
+#include "cgraph.h"
 
 using namespace std;
 
@@ -17,8 +18,14 @@ CVertex z('z');
 unordered_set<CVertex*> callStack;
 void dfs(unordered_map<char, CVertex*>& graph, CVertex *start, CVertex *parent);
 void dfsVisit(unordered_map<char, CVertex*>& graph, CVertex *vertex, CVertex *parent);
+
+CGraph g;
 int main()
 {
+    g.addVertex("A");
+    g.addVertices({CVertex("H"), CVertex("E"), CVertex("L"), CVertex("L"), CVertex("O")});
+
+    cout<<g.getVertexCount()<<endl;
     unordered_map<char, CVertex*> graph;
     graph.insert(make_pair('r', &r));
     graph.insert(make_pair('s', &s));
