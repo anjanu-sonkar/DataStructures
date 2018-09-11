@@ -11,7 +11,10 @@ enum class EdgeType{DIRECTED, UNDIRECTED};
 class CEdge
 {
 public:
-    CEdge(const std::string& vertex1, const std::string& vertex1, EdgeType type=EdgeType::UNDIRECTED, INT64 weight=0);
+    CEdge(const CVertex& vertex1, const CVertex& vertex2, EdgeType type=EdgeType::UNDIRECTED, INT64 weight=0);
+    inline void setWeight(INT64 weight) {this->weight=weight;}
+    inline INT64 getWeight() const{return weight;}
+    inline EdgeType getType() const{return type;}
 
 private:
     CVertex *vertex1, *vertex2;

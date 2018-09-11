@@ -1,6 +1,6 @@
 #include "CEdge.h"
 
-CEdge::CEdge(const std::string &vertex1, const std::string &vertex1, EdgeType type, INT64 weight)   : type{type}, weight{weight}
+CEdge::CEdge(const CVertex &vertex1, const CVertex &vertex2, EdgeType type, INT64 weight)   : vertex1{&vertex2}, vertex2{&vertex2}, type{type}, weight{weight}
 {
 
 }
